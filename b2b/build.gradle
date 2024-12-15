@@ -11,6 +11,7 @@ dependencies {
 	implementation project(':domain')
 	implementation project(':common')
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+	testImplementation 'com.h2database:h2'
 }
 
 tasks.register("prepareKotlinBuildScriptModel"){}
