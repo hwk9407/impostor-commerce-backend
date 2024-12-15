@@ -19,10 +19,10 @@ spring:
 cloud:
   aws:
     s3:
-      bucket: ${aws.s3.bucket}
-      region: ${aws.s3.region}
+      bucket: ${AWS_S3_BUCKET}
+      region: ${AWS_S3_REGION}
     credentials:
-      secretKey: ${aws.s3.secretKey}
-      accessKey: ${aws.s3.accessKey}
+      secretKey: ${AWS_S3_SECRET_KEY}
+      accessKey: ${AWS_S3_ACCESS_KEY}
     stack:
       auto: false
