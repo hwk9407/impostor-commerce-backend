@@ -7,8 +7,22 @@ spring:
         show_sql: true
         format_sql: true
         use_sql_comments: true
+  data:
+    redis:
+      password: ""
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/impostor
     username: ${db.username}
     password: ${db.password}
+
+cloud:
+  aws:
+    s3:
+      bucket: ${aws.s3.bucket}
+      region: ${aws.s3.region}
+    credentials:
+      secretKey: ${aws.s3.secretKey}
+      accessKey: ${aws.s3.accessKey}
+    stack:
+      auto: false
