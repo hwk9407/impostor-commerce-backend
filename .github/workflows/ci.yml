@@ -1,0 +1,27 @@
+name: CI 워크플로우
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - name: JDK 17 설치
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+      - name: Gradle Wrapper 실행 권한 부여
+        run: chmod +x ./gradlew
+      - name: Gradle Wrapper 로 빌드 + 테스트
+        run: ./gradlew build
