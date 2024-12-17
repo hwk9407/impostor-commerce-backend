@@ -9,12 +9,6 @@ files:
     destination: /opt/impostor/admin/
   - source: /scripts/deploy.sh
     destination: /opt/impostor/scripts/
-permissions:
-  - object: /opt/impostor/scripts/
-    pattern: "**.sh"
-    owner: root
-    group: root
-    mode: 755
 hooks:
   AfterInstall:
     - location: /opt/impostor/scripts/deploy.sh
