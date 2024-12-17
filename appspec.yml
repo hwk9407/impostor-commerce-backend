@@ -1,11 +1,11 @@
 version: 0.0
 os: linux
 files:
-  - source: /b2c/build/libs/*.jar
+  - source: /b2c/build/libs/b2c.jar
     destination: /opt/impostor/b2c/
-  - source: /b2b/build/libs/*.jar
+  - source: /b2b/build/libs/b2b.jar
     destination: /opt/impostor/b2b/
-  - source: /admin/build/libs/*.jar
+  - source: /admin/build/libs/admin.jar
     destination: /opt/impostor/admin/
   - source: /scripts/*.sh
     destination: /opt/impostor/scripts/
