@@ -32,7 +32,7 @@ jobs:
       - name: Zip 만들기 그리고 S3에 업로드
         run: |
           zip -r ${GITHUB_SHA}.zip b2c/build/libs/*.jar b2b/build/libs/*.jar admin/build/libs/*.jar AppSpec.yml scripts/*.sh
-          aws s3 cp ${GITHUB_SHA}.zip s3://${AWS_S3_BUCKET}/deploy/${GITHUB_SHA}.zip --region ${{ secrets.AWS_S3_REGION }}
+          aws s3 cp ${GITHUB_SHA}.zip s3://${AWS_S3_BUCKET}/deploy/${GITHUB_SHA}.zip --region ${AWS_DEFAULT_REGION} --debug
 #          zip -r b2c-${GITHUB_SHA}.zip b2c/build/libs/*.jar AppSpec.yml scripts/b2c/*.sh
 #          zip -r b2b-${GITHUB_SHA}.zip b2b/build/libs/*.jar AppSpec.yml scripts/b2b/*.sh
 #          zip -r admin-${GITHUB_SHA}.zip admin/build/libs/*.jar AppSpec.yml scripts/admin/*.sh
