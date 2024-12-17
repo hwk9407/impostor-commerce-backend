@@ -1,9 +1,0 @@
-spring:
-  session:
-    redis:
-      flush-mode: on_save
-  data:
-    redis:
-      host: 127.0.0.1
-      password: Password@1234
-      port: 6379
