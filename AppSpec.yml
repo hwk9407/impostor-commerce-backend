@@ -1,0 +1,22 @@
+version: 0.0
+os: linux
+files:
+  - source: /b2c/build/libs/*.jar
+    destination: /opt/impostor/b2c/
+  - source: /b2b/build/libs/*.jar
+    destination: /opt/impostor/b2b/
+  - source: /admin/build/libs/*.jar
+    destination: /opt/impostor/admin/
+  - source: /scripts/*.sh
+    destination: /opt/impostor/scripts/
+permissions:
+  - object: /opt/impostor/scripts/*.sh
+    pattern: "**"
+    owner: root
+    group: root
+    mode: 755
+hooks:
+  AfterInstall:
+    - location: /opt/impostor/scripts/*.sh
+      runas: root
+      timeout: 600
