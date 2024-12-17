@@ -10,7 +10,7 @@ files:
   - source: /scripts/*.sh
     destination: /opt/impostor/scripts/
 permissions:
-  - object: /opt/impostor/scripts/*.sh
+  - object: /opt/impostor/scripts/deploy.sh
     pattern: "**"
     owner: root
     group: root
