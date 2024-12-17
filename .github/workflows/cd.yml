@@ -41,7 +41,7 @@ jobs:
       - name: CodeDeploy 배포 시작
         run: |
           aws deploy create-deployment \
-            --application-name ${AWS_CODEDEPLOY_APPLICATION_NAME} \
+            --application-name impostor-code-deploy \
             --deployment-group ${AWS_CODEDEPLOY_DEPLOYMENT_GROUP} \
             --s3-location bucket=${AWS_S3_BUCKET},key=deploy/${GITHUB_SHA}.zip,bundleType=zip \
             --region ${{ secrets.AWS_S3_REGION }}
