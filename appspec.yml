@@ -7,7 +7,7 @@ files:
     destination: /opt/impostor/b2b/
   - source: /admin/build/libs/admin.jar
     destination: /opt/impostor/admin/
-  - source: /scripts/*.sh
+  - source: /scripts/deploy.sh
     destination: /opt/impostor/scripts/
 permissions:
   - object: /opt/impostor/scripts/deploy.sh
