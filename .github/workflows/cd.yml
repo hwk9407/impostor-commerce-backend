@@ -43,7 +43,7 @@ jobs:
           aws deploy create-deployment \
           --application-name impostor-code-deploy \
           --deployment-group-name impostor-deploy-group \
-          --s3-location bucket=impostor-s3bucket,key=deploy/${GITHUB_SHA}.zip,bundleType=zip \
+          --s3-location "bucket=impostor-s3bucket,key=deploy/${GITHUB_SHA}.zip,bundleType=zip" \
           --region ap-northeast-2
         env:
           AWS_CODEDEPLOY_APPLICATION_NAME: ${{ secrets.AWS_CODEDEPLOY_APPLICATION_NAME }}
