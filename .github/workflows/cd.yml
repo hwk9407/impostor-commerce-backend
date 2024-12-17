@@ -43,7 +43,7 @@ jobs:
           aws deploy create-deployment \
             --application-name ${AWS_CODEDEPLOY_APPLICATION_NAME} \
             --deployment-group-name ${AWS_CODEDEPLOY_DEPLOYMENT_GROUP} \
-            --s3-location bucket=${AWS_S3_BUCKET},key=deploy/${GITHUB_SHA}.zip,bundleType=zip \
+            --revision revisionType=S3,s3Location={bucket=${AWS_S3_BUCKET},key=deploy/${GITHUB_SHA}.zip,bundleType=zip} \
             --region ${{ secrets.AWS_S3_REGION }}
         env:
           AWS_CODEDEPLOY_APPLICATION_NAME: ${{ secrets.AWS_CODEDEPLOY_APPLICATION_NAME }}
