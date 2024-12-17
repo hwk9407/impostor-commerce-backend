@@ -7,10 +7,8 @@ files:
     destination: /opt/impostor/b2b/
   - source: /admin/build/libs/admin.jar
     destination: /opt/impostor/admin/
-  - source: /scripts/deploy.sh
-    destination: /opt/impostor/scripts/
 hooks:
   AfterInstall:
-    - location: /opt/impostor/scripts/deploy.sh
+    - location: /scripts/deploy.sh
       runas: root
       timeout: 600
