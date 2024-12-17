@@ -32,7 +32,7 @@ jobs:
 #          zip -r admin-${GITHUB_SHA}.zip admin/build/libs/*.jar AppSpec.yml scripts/admin/*.sh
         shell: bash
         env:
-          AWS_S3_BUCKET_NAME: ${{ secrets.AWS_S3_BUCKET }}
+          AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
           AWS_S3_REGION: ${{ secrets.AWS_S3_REGION }}
           AWS_S3_SECRET_KEY: ${{ secrets.AWS_S3_SECRET_KEY }}
           AWS_S3_ACCESS_KEY: ${{ secrets.AWS_S3_ACCESS_KEY }}
