@@ -19,4 +19,4 @@ hooks:
   AfterInstall:
     - location: /opt/impostor/scripts/deploy.sh
       runas: root
-      timeout: 300
+      timeout: 600
