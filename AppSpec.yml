@@ -17,6 +17,6 @@ permissions:
     mode: 755
 hooks:
   AfterInstall:
-    - location: /opt/impostor/scripts/*.sh
+    - location: /opt/impostor/scripts/deploy.sh
       runas: root
-      timeout: 600
+      timeout: 300
